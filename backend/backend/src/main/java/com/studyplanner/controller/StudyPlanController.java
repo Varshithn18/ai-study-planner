@@ -17,13 +17,13 @@ public class StudyPlanController {
         this.studyPlanService = studyPlanService;
     }
 
-    @PostMapping("/generate")
-    public List<StudyPlan> generatePlan(
+
+    @PostMapping("/generate-multi")
+    public List<StudyPlan> generateMultiDayPlan(
             @RequestParam Long userId,
             @RequestParam int dailyHours) {
 
-        return studyPlanService.generatePlan(userId, dailyHours);
+        return studyPlanService.generateMultiDayPlan(userId, dailyHours);
     }
-
 
 }

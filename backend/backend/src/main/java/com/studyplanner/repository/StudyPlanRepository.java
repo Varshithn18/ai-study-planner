@@ -8,4 +8,5 @@ import java.util.List;
 public interface StudyPlanRepository extends JpaRepository<StudyPlan, Long> {
 
     List<StudyPlan> findBySubjectId(Long subjectId);
+    void deleteBySubject_User_Id(Long userId);
 }
