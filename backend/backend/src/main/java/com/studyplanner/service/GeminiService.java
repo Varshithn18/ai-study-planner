@@ -17,8 +17,8 @@ public class GeminiService {
 
     public String generateResponse(String prompt) {
 
-        String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + apiKey;
 
+        String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + apiKey;
         Map<String, Object> part = new HashMap<>();
         part.put("text", prompt);
 
@@ -36,7 +36,7 @@ public class GeminiService {
 
         ResponseEntity<String> response =
                 restTemplate.postForEntity(url, entity, String.class);
-
+        //System.out.println("URL: " + url);
         return response.getBody();
     }
 }
