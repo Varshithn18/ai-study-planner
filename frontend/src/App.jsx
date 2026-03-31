@@ -6,9 +6,15 @@ function App() {
     <div>
       <h1>AI Study Planner</h1>
 
-      <AddSubject />
-      <hr />
-      <StudyPlan />
+      <div className="container">
+        <div className="section">
+          <AddSubject />
+        </div>
+
+        <div className="section">
+          <StudyPlan />
+        </div>
+      </div>
     </div>
   );
 }

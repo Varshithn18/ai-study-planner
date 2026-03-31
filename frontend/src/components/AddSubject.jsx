@@ -37,10 +37,12 @@ function AddSubject() {
     <div>
       <h2>Add Subject</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ marginTop: "15px" }}>
+        
+        <label>Subject Name</label>
         <input
           type="text"
-          placeholder="Subject Name"
+          placeholder="Enter subject name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -48,9 +50,12 @@ function AddSubject() {
 
         <br /><br />
 
+        <label>Difficulty (1-5)</label>
         <input
           type="number"
-          placeholder="Difficulty (1-5)"
+          min="1"
+          max="5"
+          placeholder="Enter difficulty"
           value={difficulty}
           onChange={(e) => setDifficulty(e.target.value)}
           required
@@ -58,6 +63,7 @@ function AddSubject() {
 
         <br /><br />
 
+        <label>Exam Date</label>
         <input
           type="date"
           value={deadline}
