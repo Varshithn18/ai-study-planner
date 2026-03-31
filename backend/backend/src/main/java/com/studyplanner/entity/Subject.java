@@ -34,6 +34,7 @@ public class Subject {
     private User user;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    @JsonIgnore   // 🔥 ADD THIS
     private List<StudyPlan> studyPlans;
 
     // getters & setters

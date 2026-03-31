@@ -17,7 +17,7 @@ function AddSubject() {
 
     try {
       await axios.post(
-        "http://localhost:8080/subjects?userId=1",
+        "http://localhost:8080/subjects?userId=3",
         subject
       );
 
