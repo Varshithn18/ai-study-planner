@@ -15,10 +15,9 @@ public class AIController {
     }
 
     @GetMapping("/recommend")
-    public String getRecommendation(@RequestParam String subject) {
+    public String getRecommendation(@RequestParam String prompt) {
 
-        String prompt = "Generate a structured study plan for " + subject +
-                " including topics, time allocation, and revision strategy.";
+
 
         return geminiService.generateResponse(prompt);
     }
